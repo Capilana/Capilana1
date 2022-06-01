@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/galaxia\ violeta.jpg);
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contenedor{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 3 fr;
+    grid-template-rows: 1fr 5 fr 1 fr;
+    grid-template-areas:
+    "header header"
+    "aside main" 
+    "footer footer";
+}
+.header{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: header;
+    ;
+}
+.header img{
+    width: 250px;
+    height: 250px;
+}
+.header .menu ul{
+    list-style-type: none;
+    display: flex;
+    background-color: blueviolet
+    
+}
+.header .menu a{
+    color: fuchsia;
+    text-decoration:none;
+    padding: 20px;
+    font-size: 20px;
+}
+.header .menu a:hover{
+    font-size: 25px;
+    color: yellow;
+    font-weight: bold;
+}
+main{
+    background-color: blueviolet;
+    padding: 1.2rem;
+    grid-area: main;
+}
+main h2{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1.2rem;
+    text-align: center;
+}
+main p{
+    color: white;
+    font-size: 1rem ;
+    line-height: 1.8rem;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+}
+aside img{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+footer{
+    margin: 20px;
+    padding: 1rem;
+    color: yellow;
+    text-align: center;
+    grid-area: footer;
+}
+@media screen and (max-width:1024px) {
+    
+        .contenedor{
+            display: grid;
+            grid-template-columns: 1fr 3 fr;
+            grid-template-rows: 1fr 3 fr 1fr 1 fr;
+            grid-template-areas:
+            "header header"
+            "main main" 
+            "aside aside"
+            "footer footer";
+        }
+}
+@media screen and (max-width:576px) {
+    body{
+        background-image: url(../img/galaxia\ azul.jpg);
+       
+    }
+    }
