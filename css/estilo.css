@@ -88,6 +88,10 @@ footer{
     text-align: center;
     grid-area: footer;
 }
+footer :hover{
+    transform: scale(1,2);
+
+}
 @media screen and (max-width:1024px) {
     
         .contenedor{
